@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="3.78" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-02-13T04:27:02.574763500Z">
+<testcase classname="Login Functionality" name="Successful login with valid credentials" time="2.255">
+<system-out><![CDATA[
+Given I am on the login page................................................passed
+When I enter valid username "standard_user".................................passed
+And I enter password "secret_sauce".........................................passed
+And I click the login button................................................passed
+Then I should be redirected to the dashboard................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="Unsuccessful login with invalid credentials" time="1.334">
+<system-out><![CDATA[
+Given I am on the login page................................................passed
+When I enter valid username "standard_user".................................passed
+And I enter password "invalid"..............................................passed
+And I click the login button................................................passed
+Then I should see an alert message "Epic sadface: Username and password do not match any user in this service".passed
+]]></system-out>
+</testcase>
+</testsuite>
